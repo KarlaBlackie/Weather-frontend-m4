@@ -90,7 +90,7 @@ Commits descriptivos incluídos.
 
 
 ## ++Enlace al repositorio público**
-[Ver respositorio completo] https://github.com/KarlaBlackie/Weather-frontend-m4
+[Ver repositorio completo] https://github.com/KarlaBlackie/Weather-frontend-m4
 
 **Desarrollado por Karla Jara Mena**
 *Bootcamp frontend Trainee - 2026*
