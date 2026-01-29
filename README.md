@@ -1,41 +1,46 @@
-# Weather Frontend M3 - Clima y Salud EMocional
+# Weather Frontend M4 - Clima, estadísticas y bienestar.
 ## ** Descripción**
-Esta aplicación conecta el estado meteorológico de 12 ciudades internacionales con el bienestar emocional, ofreciendo consejos personalizados de mindfulness.El proyecto está construido bajo el concepto de SPA(Single page application), gestionando las vistas de manera dinámica mediante JavaScript.(Home y detalle sin recargar la página)
+Esta aplicación conecta el estado meteorológico de 12 ciudades internacionales con el bienestar emocional. En esta versión(módulo 4), se ha integrado un motor de análisis de datos que procesa el pronóstico semanal para ofrecer estadísticas técnicas y un resumen analítico basado en el clima predominante.
 
+## ** Novedades del módulo 4: Análisis de datos**
+La aplicación ahora incluye una función de procesamiento dinámico que calcula:
+Temperaturas extremas: identificación de la temperatura máxima y mínima de toda la semana.
+Promedio térmico: cálculo de la media aritmética de la semana mediante acumuladores.
+Contador de climas: clasificación automática de días(soleados, lluviosos, nublados).
+Análisis predictivo: generación de un resumen basado en condicionales lógicos.
 
 
 ## ** Funcionalidades**
 
-- **12 ciudades** internacionales con consejos emocionales únicos.
-- **Navbar responsive** Bootstrap 5(mobile -> desktop)
+- **12 ciudades** con renderizado dinámico mediante Javascript.
 
-- **Flip cards interactivas** con efecto 3d.
+- **Lógica de estadísticas** procesamiento en tiempo real de arreglos de objetos anidados.
 
-- **Navegación fluida** entre vista principal(grilla de ciudades) y vista detalle.
+- **Navegación SPA** transición fluída entre la grilla principal y la vista de detalle con estadísticas.
 
-- **Detalle completo**: imagen,estado, temperatura,  humedad, viento, **pronóstico 7 días**.
+- **Flip cards interactivas** con consejos de mindfulness en el reverso.
 
-## **Responsive design**
-| **Móvil ≤420px** | **Tablet** | **Desktop ≥1024px** |
-| ---------------- | ---------- | ------------------- |
-| 1 columna        | 2 columnas | **3-4 columnas**    |
 
-Layout responsivo usando grid de bootstrap(row/col, row-cols-1, row-cols-sm-2, row-cols-md-3, row-cols-lg-4).
+- **Detalle completo**: incluye ahora una sección de estadísticas de la semana y datos adicionales.
+
+
+
 
 ## **Tecnologías utilizadas**
+- **Javascript**: uso avanzado de arreglos, objetos, métodos(map, find, forEach), condicionales y ciclos para el procesamiento de datos.
 
-HTML5:estructura semántica(header, nav, main, section, footer)
-Sass(scss); variables, mixins, parciales, anidamiento y arquitectura tipo 7-1 etc.
-CSS3: animaciones y transformaciones 3D para flip cards.
-JavaScript(Vanilla): manipulación del DOM, eventos, renderizado dinámico de tarjetas y vistas.
-Bootstrap 5 vía CDN: grid system, navbar, utilidades y bootstrap icons,
-Git/Github: repositorio público con commits descriptivos.
+- **HTML5**: estructura semántica avanzada.
 
-## **Metodología de estilos**
-Se utiliza la metodología BEM, para nombrar las clases CSS facilitando la mantenibilidad y escabilidad del código.
+- **Sass(Scss)**: arquitectura 7-1(variables, mixins, parciales).
+
+- **Bootstrap 5**: sistemas de grillas, componentes y utilidades.
+
+- **Git/Github**: control de versiones con historial de desarrollo incremental.
+
+
 
 ## **Estructura SASS**
-La estructura sigue una arquitectura inspirada en 7-1 separando responsabilidades:
+Se mantiene la separación de responsabilidades para asegurar la escabilidad:
 
 /scss
     /abstracts
@@ -49,7 +54,7 @@ La estructura sigue una arquitectura inspirada en 7-1 separando responsabilidade
     /layout
     _header.scss      //Estilos del header, navbar
     _footer.scss      //Estilos del footer
-    _grid.csss        //Configuración general del layout/grilla
+    _grid.scss        //Configuración general del layout/grilla
 
     /components
     _button.scss      //Botones reutilizables
@@ -63,15 +68,29 @@ La estructura sigue una arquitectura inspirada en 7-1 separando responsabilidade
 
     main.scss         //Importa todos los parciales csss
 
+  ## **Modelado de datos**  
+  La información se gestiona de forma centralizada para facilitar su escalabilidad:
+## **Estructura principal**
+    Un arreglo global de objetos(`ciudades`), donde cada ciudad posee atributos de identificación, estado actual y mensajes de bienestar.
+
+## **Pronóstico anidado**
+    Cada ciudad contiene una propiedad(`pronosticoSemanal`), que es a su vez un arreglo de objetos. Esto permite iterar sobre los días para realizar los cálculos estadísticos dinámicos.
+
+
+
 ## **Commits**
 Commits descriptivos incluídos.
+
+- **Metodología**
+- **BEM(block, element, modifier)**: para nombrar clases
+- **Clean code**: funciones de Javascript modularizadas, ej: calcularEstadisticas.
 
 
 
 
 
 ## ++Enlace al repositorio público**
-[Ver respositorio completo] https://github.com/KarlaBlackie/weather-frontend-m3
+[Ver respositorio completo] https://github.com/KarlaBlackie/Weather-frontend-m4
 
 **Desarrollado por Karla Jara Mena**
 *Bootcamp frontend Trainee - 2026*
